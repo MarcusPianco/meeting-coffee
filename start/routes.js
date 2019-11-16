@@ -15,3 +15,9 @@
 const Route = use('Route');
 
 Route.post('/users', 'User/UserController.store');
+
+Route.post('/sessions', 'User/SessionController.store');
+
+Route.get('/meetings', 'Meeting/MeetingController.index');
+
+Route.resource('/meetings', 'Meeting/MeetingController').apiOnly();

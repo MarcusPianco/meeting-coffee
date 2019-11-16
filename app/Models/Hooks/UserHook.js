@@ -4,5 +4,5 @@ const UserHook = (exports = module.exports = {});
 const Hash = use('Hash');
 
 UserHook.hashPassword = async userinstance => {
-  userinstance.dirty.password = await Hash.make(userinstance.password);
+  userinstance.password = await Hash.make(userinstance.password);
 };
