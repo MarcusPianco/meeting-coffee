@@ -26,3 +26,6 @@ Route.post(
   '/meetings/:meeting_id/subscriptions',
   'Meeting/SubscriptionController.store'
 );
+
+Route.post('/files', 'File/FileController.store');
+Route.get('/files/:file_id', 'File/FileController.show');
