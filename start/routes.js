@@ -21,3 +21,8 @@ Route.post('/sessions', 'User/SessionController.store');
 Route.get('/meetings', 'Meeting/MeetingController.index');
 
 Route.resource('/meetings', 'Meeting/MeetingController').apiOnly();
+
+Route.post(
+  '/meetings/:meeting_id/subscriptions',
+  'Meeting/SubscriptionController.store'
+);
