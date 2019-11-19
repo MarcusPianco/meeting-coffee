@@ -9,9 +9,9 @@ const User = use('App/Models/User');
 class SubscriptionController {
   async store({ request, params, response }) {
     const user_id = request.input('user_id');
-    const { meeting_id } = params;
+    const { meetings_id } = params;
     try {
-      const meetingValid = await Meeting.find(meeting_id);
+      const meetingValid = await Meeting.find(meetings_id);
       if (
         Number(new Date(meetingValid.date)) < Number(new Date()) ||
         !meetingValid

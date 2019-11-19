@@ -21,6 +21,10 @@ class Meeting extends Model {
       .pivotTable('user_meetings')
       .withTimestamps();
   }
+
+  image() {
+    return this.belongsTo('App/Models/File');
+  }
 }
 
 module.exports = Meeting;
