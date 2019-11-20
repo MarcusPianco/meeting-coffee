@@ -18,6 +18,13 @@ Route.post('/users', 'User/UserController.store');
 
 Route.post('/sessions', 'User/SessionController.store');
 
-Route.get('/meetings', 'Meeting/MeetingController.index');
+Route.group(() => {
+  Route.resource('meetings', 'Meeting/MeetingController').apiOnly();
+  Route.resource(
+    'meetings.subscriptions',
+    'Meeting/SubscriptionController'
+  ).apiOnly();
 
-Route.resource('/meetings', 'Meeting/MeetingController').apiOnly();
+  Route.post('/files', 'File/FileController.store');
+  Route.get('/files/:file_id', 'File/FileController.show');
+}).middleware(['auth']);

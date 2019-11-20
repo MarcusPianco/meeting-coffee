@@ -28,7 +28,9 @@ class User extends Model {
   }
 
   meetings() {
-    this.hasMany('App/Models/Meeting');
+    return this.belongsToMany('App/Models/Meeting', 'meeting_id')
+      .pivotTable('user_meetings')
+      .withTimestamps();
   }
 }
 

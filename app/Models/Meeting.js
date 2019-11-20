@@ -15,6 +15,16 @@ class Meeting extends Model {
   mediator() {
     return this.belongsTo('App/Models/User', 'mediator_id', 'id');
   }
+
+  users() {
+    return this.belongsToMany('App/Models/Meeting', 'user_id')
+      .pivotTable('user_meetings')
+      .withTimestamps();
+  }
+
+  image() {
+    return this.belongsTo('App/Models/File');
+  }
 }
 
 module.exports = Meeting;

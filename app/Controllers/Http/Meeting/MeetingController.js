@@ -15,15 +15,15 @@ class MeetingController {
     }
   }
 
-  async show({ params, response }) {
+  async show({ params }) {
+    console.log(params);
     try {
-      const meeting = await Meeting.query()
-        .where('id', params.meeting_id)
-        .with('leader')
-        .with('mediator')
-        .fetch();
+      const meeting = await Meeting.findOrFail(params.id);
 
-      return response.status(200).json({ meeting });
+      await meeting.load('leader');
+      await meeting.load('mediator');
+
+      return meeting;
     } catch (err) {
       console.log(err);
     }
@@ -37,6 +37,7 @@ class MeetingController {
       .where('id', meeting.id)
       .with('leader')
       .with('mediator')
+      .with('image')
       .fetch();
 
     return meetingDetails;
