@@ -15,7 +15,7 @@ Technologies used:
 Use the adonis commands in terminal to start the server
 
 ```bash
-adonis migration:run && adonis serve
+yarn && adonis migration:run && adonis serve
 ```
 
 or manually to build a 'script' command in package.json to run for example: `npm start`.
