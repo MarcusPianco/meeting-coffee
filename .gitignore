@@ -11,5 +11,4 @@ tmp
 database/*.sqlite
 
 #dependencies bind
-yarn.lock
-package-lock.json
+
