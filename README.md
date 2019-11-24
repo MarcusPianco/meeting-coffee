@@ -18,6 +18,14 @@ Use the adonis commands in terminal to start the server
 yarn && adonis migration:run && adonis serve
 ```
 
+## Run Queue of Jobs
+
+Open other terminal tab and run the command bellow
+
+```bash
+adonis kue:listen
+```
+
 or manually to build a 'script' command in package.json to run for example: `npm start`.
 
 ### Contributions

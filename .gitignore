@@ -11,4 +11,4 @@ tmp
 database/*.sqlite
 
 #dependencies bind
-
+package-lock.json

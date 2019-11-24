@@ -6,6 +6,7 @@ const User = use('App/Models/User');
 /**
  * Resourceful controller for interacting with subscriptions
  */
+
 class SubscriptionController {
   async store({ request, params, response }) {
     const user_id = request.input('user_id');
