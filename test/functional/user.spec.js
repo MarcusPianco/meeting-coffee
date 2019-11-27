@@ -37,3 +37,19 @@ test('shuold failure when create already exist user', async ({
   response.assertStatus(404);
   assert.exists(response.body.error);
 });
+
+test('shuold update user', async ({ assert, client }) => {
+  const user = await Factory.model('App/Models/User').create({
+    email: 'marcus2.ufal@gmail.com',
+  });
+  const userDataUpdate = {
+    email: 'marcus2.ufal@gmail.com',
+    password: '123456',
+  };
+  const response = await client
+    .post(`/users/${user.id}`)
+    .send(userDataUpdate)
+    .end();
+  response.assertStatus(200);
+  assert.exists(response.body.id);
+});

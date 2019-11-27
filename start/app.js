@@ -54,7 +54,7 @@ const aliases = {};
 | Commands
 |--------------------------------------------------------------------------
 |
-| Here you store ace commands for your jobs
+| Here you store for your jobs
 |
 */
 const jobs = ['App/Jobs/MeetingConfirmation'];

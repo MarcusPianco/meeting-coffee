@@ -36,7 +36,7 @@ or manually to build a 'script' command in package.json to run for example: `npm
 3.1 - Social network acess and signup;
 3.2 - Appointments resource of meetings
 (should include a broadcast menssage
-confirmation for the NERDS);
+confirmation for the NERDS); DONE;
 3.3 - Places resource (places of the meetings);
 3.4 - Feedbacks resource;
 3.5 - Chat resource (it would be so good);

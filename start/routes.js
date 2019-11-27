@@ -15,6 +15,7 @@
 const Route = use('Route');
 
 Route.post('/users', 'User/UserController.store');
+Route.post('/users/:id', 'User/UserController.update');
 
 Route.post('/sessions', 'User/SessionController.store');
 
