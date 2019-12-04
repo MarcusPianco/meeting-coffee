@@ -10,6 +10,8 @@ Technologies used:
 4. AdonisJS
 5. Docker(will be implemented )
 6. Sqlite
+7. Mailgun
+8. Kue
 
 ## Setup
 
