@@ -19,6 +19,7 @@ const providers = [
   '@adonisjs/vow/providers/VowProvider',
   '@adonisjs/redis/providers/RedisProvider',
   'adonis-kue/providers/KueProvider',
+  '@rocketseat/adonis-timezone/providers/TimezoneProvider',
 ];
 
 /*

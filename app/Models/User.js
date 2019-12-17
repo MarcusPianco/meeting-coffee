@@ -4,6 +4,7 @@ const Model = use('Model');
 class User extends Model {
   static boot() {
     super.boot();
+    this.addTrait('@provider:Timezone/Trait');
 
     /**
      * A hook to hash the user password before saving

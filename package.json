@@ -28,6 +28,7 @@
     "@adonisjs/mail": "^3.0.10",
     "@adonisjs/redis": "^2.0.7",
     "@adonisjs/vow": "^1.0.17",
+    "@rocketseat/adonis-timezone": "^0.7.0",
     "adonis-kue": "^5.0.1",
     "bee-queue": "^1.2.2",
     "date-fns": "^2.7.0"
